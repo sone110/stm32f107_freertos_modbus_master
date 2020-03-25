@@ -132,14 +132,14 @@ void led0_task(void *pvParameters)
 //    }
 //   vTaskDelay(1);
    /*功能码0x0F 写多个线圈*/
-   reg[0]=0x5555;
-   reg[1]=0xaaaa;
-   status= modbus_poll_write_multiple_coils(1,10,20,reg); 
-    
-   if(status!=MODBUS_POLL_STATUS_SUCCESS)
-   {
-     printf("写多个线圈错误！\r\n"); 
-   }
+//   reg[0]=0x5555;
+//   reg[1]=0xaaaa;
+//   status= modbus_poll_write_multiple_coils(1,10,20,reg); 
+//    
+//   if(status!=MODBUS_POLL_STATUS_SUCCESS)
+//   {
+//     printf("写多个线圈错误！\r\n"); 
+//   }
 //     vTaskDelay(1);
 //    status=modbus_poll_read_input_registers(1,20,10,reg);
 //    
@@ -154,13 +154,13 @@ void led0_task(void *pvParameters)
 //        printf("读取的输入寄存器值:%d.\r\n",reg[i]); 
 //      }
 //    }
-    vTaskDelay(1);
-    status= modbus_poll_write_single_coil(1,10,0);
-    if(status!=MODBUS_POLL_STATUS_SUCCESS)
-    {
-			printf("写单个线圈错误！\r\n"); 
-    }
-    vTaskDelay(1);
+//    vTaskDelay(1);
+//    status= modbus_poll_write_single_coil(1,10,0);
+//    if(status!=MODBUS_POLL_STATUS_SUCCESS)
+//    {
+//			printf("写单个线圈错误！\r\n"); 
+//    }
+//    vTaskDelay(1);
    /*功能码0x10*/
 //    status= modbus_poll_write_multiple_registers(1,0,10, reg);
 //    if(status!=MODBUS_POLL_STATUS_SUCCESS)
@@ -192,7 +192,7 @@ void led1_task(void *pvParameters)
 		}
 		else
 		{
-			printf("读净重值：1.%2x 2.%2x 3.%2x 4.%2x\r\n",reg[0],reg[1],reg[2],reg[3]);   
+	//		printf("读净重值：1.%2x 2.%2x 3.%2x 4.%2x\r\n",reg[0],reg[1],reg[2],reg[3]);   
 		}
 		
 	
